@@ -1,7 +1,7 @@
 import 'package:get/get.dart';
+import 'package:my_icon_plus/app/modules/home/presentation/bindings/home_binding.dart';
+import 'package:my_icon_plus/app/modules/home/presentation/views/home_view.dart';
 
-import '../modules/home/bindings/home_binding.dart';
-import '../modules/home/views/home_view.dart';
 
 part 'app_routes.dart';
 
