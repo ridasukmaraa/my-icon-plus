@@ -1,16 +1,55 @@
-# my_icon_plus
+# 🧩 My Icon Plus
 
-My Icon Plus Application
+Aplikasi Flutter berbasis **Clean Architecture** dan menggunakan **GetX** untuk manajemen state dan routing. Cocok untuk dijadikan template awal pengembangan aplikasi modular dengan skala menengah hingga besar.
 
-## Getting Started
+---
 
-This project is a starting point for a Flutter application.
+## 🏗️ Arsitektur
 
-A few resources to get you started if this is your first Flutter project:
+Proyek ini mengikuti struktur **Clean Architecture**:
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+```
+lib/
+└── app/
+├── modules/
+│ └── home/
+│ ├── data/ → Data source & repository (belum diimplementasi)
+│ ├── domain/ → Entitas & usecase
+│ │ └── entities/
+│ └── presentation/ → Layer UI
+│ ├── controllers/
+│ ├── bindings/
+│ ├── views/
+│ └── widgets/
+├── routes/ → Manajemen routing (GetX)
+├── constants/ → Konstanta global (warna, konfigurasi)
+└── main.dart
+```
+
+
+### Layer-Layer Utama:
+
+- **Domain:** Berisi entitas seperti `InternetPromoEntity`, `MenuEntity`, dan `TestimonyEntity`.
+- **Data:** Belum diisi, tapi disiapkan untuk mengelola data dari API, database, atau cache.
+- **Presentation:** UI menggunakan GetX controller & view modular.
+- **Routing:** File `app_pages.dart` dan `app_routes.dart` untuk mendefinisikan navigasi.
+
+---
+
+## 🚀 Fitur
+
+- Modularisasi berdasarkan fitur (saat ini: `home`)
+- Arsitektur bersih & scalable
+- Integrasi GetX untuk controller, binding, dan route
+- Asset management (`icons`, `images`, `logos`)
+
+---
+
+## ▶️ Cara Menjalankan
+
+```bash
+git clone https://github.com/ridasukmaraa/my-icon-plus.git
+cd my-icon-plus
+flutter pub get
+flutter run
